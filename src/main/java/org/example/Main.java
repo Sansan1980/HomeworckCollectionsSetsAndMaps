@@ -17,16 +17,9 @@ public class Main {
 
         for (String a : strings) {
             if (map.containsKey(a)) {
-                for (Map.Entry<String, Integer> entry : map.entrySet()) {
-                    // get key
-                    // String key = entry.getKey();
-                    // get value
-                    Integer v = entry.getValue();
-                 System.out.println(v++);
-                    map.put(a, v);
-                }
+                map.merge(a, 1, Integer::sum);
                 System.out.println(map + "||| " + a );
-            } else {
+           } else {
                 map.put(a, 1);
                System.out.println(map + "ZZZ " + a);
             }
