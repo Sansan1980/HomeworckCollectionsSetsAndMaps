@@ -56,7 +56,6 @@ public class Main {
         Map<String, Integer> map = new HashMap<>();
         for (String a : strings) {
             if (map.containsKey(a)) {
-                ;
             } else {
                 map.put(a, 1);
             }
